@@ -207,4 +207,4 @@ Make sure to configure the following environment variables in your `.env` file:
 
 ## License
 
-This project is licensed under the MIT License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
