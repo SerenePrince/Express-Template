@@ -1,0 +1,22 @@
+# Node modules
+node_modules/
+
+# .env file containing sensitive environment variables
+.env
+
+# Logs (if any logging is done to files)
+logs/
+
+# Dependency directories and system files
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE config files
+.vscode/
+.idea/
