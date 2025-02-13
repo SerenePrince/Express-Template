@@ -7,7 +7,7 @@ const signupController = async (req, res) => {
     const { user, token } = await signup(email, password, role);
 
     // Set JWT in cookie
-    res.cookie("token", token, {
+    res.cookie("access_token", token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production", // Use secure flag in production
       sameSite: "Strict", // Prevent CSRF attacks
@@ -35,7 +35,7 @@ const loginController = async (req, res) => {
     const { user, token } = await login(email, password);
 
     // Set JWT in cookie
-    res.cookie("token", token, {
+    res.cookie("access_token", token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production", // Use secure flag in production
       sameSite: "Strict", // Prevent CSRF attacks
@@ -57,7 +57,7 @@ const loginController = async (req, res) => {
 };
 
 const logoutController = (req, res) => {
-  res.clearCookie("token");
+  res.clearCookie("access_token");
   res.json({
     success: true,
     message: "Logged out successfully",

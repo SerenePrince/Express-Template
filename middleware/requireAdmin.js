@@ -3,15 +3,12 @@ const User = require("../models/userModel");
 const logger = require("../utils/logger");
 
 const requireAdmin = async (req, res, next) => {
-  const authHeader = req.headers.authorization;
+  // Get token from cookies
+  const token = req.cookies?.access_token;
 
-  // Validate Authorization header
-  if (!authHeader || !authHeader.startsWith("Bearer ")) {
-    logger.error("Authorization token required but not provided.");
+  if (!token) {
     return res.status(401).json({ error: "Authorization token required" });
   }
-
-  const token = authHeader.split(" ")[1]; // Extract token
 
   try {
     // Verify token and decode

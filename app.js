@@ -5,6 +5,7 @@ const helmet = require("helmet");
 const logger = require("./utils/logger");
 const { generalLimiter, sensitiveLimiter } = require("./middleware/limiter");
 const { corsOption } = require("./middleware/corsOptions");
+const cookieParser = require("cookie-parser");
 
 const app = express();
 
@@ -28,6 +29,7 @@ app.use(helmet()); // Protect against well-known vulnerabilities
 app.use(generalLimiter); // Apply rate-limiting to all routes
 app.use(cors(corsOption)); // Enable CORS with custom options
 app.use(express.json()); // Middleware to parse JSON bodies
+app.use(cookieParser()); // Enables cookie access
 
 // Request Logger Middleware
 app.use((req, res, next) => {
