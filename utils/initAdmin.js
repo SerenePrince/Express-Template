@@ -1,5 +1,5 @@
 const bcrypt = require("bcrypt");
-const User = require("../models/userSchema");
+const User = require("../models/userModel");
 const logger = require("./logger");
 
 const createAdmin = async () => {

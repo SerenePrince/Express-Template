@@ -64,7 +64,7 @@ Ensure that you have the following installed:
    Open the `.env` file and fill in the following details:
 
    - `PORT`: The port your app will run on (default: `4000`).
-   - `MONGO_DB_URI`: Your MongoDB connection string.
+   - `MONGO_URI`: Your MongoDB connection string.
    - `JWT_SECRET`: A strong secret key for signing JWT tokens.
    - `JWT_EXPIRATION`: The expiration time for the JWT tokens (e.g., `1h` for 1 hour).
    - `FRONTEND_URL`: The URL of your frontend application for CORS configuration.
@@ -193,7 +193,7 @@ Make sure to configure the following environment variables in your `.env` file:
 | Variable               | Description                                            | Example                                |
 | ---------------------- | ------------------------------------------------------ | -------------------------------------- |
 | `PORT`                 | Port the server will run on                            | `4000`                                 |
-| `MONGO_DB_URI`         | MongoDB connection string (local or cloud)             | `mongodb://localhost:27017/mydatabase` |
+| `MONGO_URI`            | MongoDB connection string (local or cloud)             | `mongodb://localhost:27017/mydatabase` |
 | `NODE_ENV`             | Environment type (`development`, `production`, `test`) | `development`                          |
 | `JWT_SECRET`           | Secret key for signing JWT tokens                      | `your_jwt_secret_key`                  |
 | `JWT_EXPIRATION`       | Expiration time for JWT tokens                         | `3600` (1 hour)                        |
